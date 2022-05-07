@@ -1,0 +1,17 @@
+package com.fu.myrule;
+
+import com.netflix.loadbalancer.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyselfRule {
+    @Bean
+    public IRule myRule(){
+        //随机
+        return new RandomRule();
+//        return new RetryRule();
+//        return new BestAvailableRule();
+//        return new AvailabilityFilteringRule();
+    }
+}
