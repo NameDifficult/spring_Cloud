@@ -8,7 +8,7 @@ spring:
     name: cloud-payment-service  #入住进eureka时的名称
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: com.mysql.cj.jdbc.Driver            # mysql驱动包 com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver            # mysql驱动包 com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/cloud?serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: 123456

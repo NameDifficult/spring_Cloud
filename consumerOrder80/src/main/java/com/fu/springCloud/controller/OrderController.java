@@ -57,11 +57,13 @@ public class OrderController {
     public String getPaymentLB()
     {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        System.out.println(instances);
         if (instances == null || instances.size() <= 0){
             return null;
         }
         ServiceInstance serviceInstance = loadBalancer.instances(instances);
         URI uri = serviceInstance.getUri();
+        System.out.println(uri);
         return restTemplate.getForObject(uri+"/payment/lb",String.class);
     }
 }
